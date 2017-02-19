@@ -7,6 +7,8 @@ import javafx.scene.shape.*;
 
 public class JavaFXApplication extends Application {
 
+    private static String windowTitle = "LAB 1";
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         initializeScene(primaryStage);
@@ -35,6 +37,7 @@ public class JavaFXApplication extends Application {
         Scene scene = new Scene(node, PointsProvider.windowWidth, PointsProvider.windowHeight);
         primaryStage.setScene(scene);
         scene.setFill(Color.valueOf(ColorsProvider.backgroundColor));
+        primaryStage.setTitle(windowTitle);
         return scene;
     }
 }
