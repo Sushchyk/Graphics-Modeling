@@ -12,9 +12,6 @@ public class Sail extends MyShape{
 
     @Override
     public Polygon build() {
-        Polygon sail = new Polygon();
-        sail.getPoints().addAll(this.shapePoints);
-        sail.setFill(Color.valueOf(this.shapeColor));
-        return sail;
+        return getPolygon(this.shapePoints);
     }
 }

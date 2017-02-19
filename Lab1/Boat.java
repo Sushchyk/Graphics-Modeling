@@ -10,9 +10,6 @@ public class Boat extends MyShape {
     }
     @Override
     public Polygon build() {
-        Polygon boat = new Polygon();
-        boat.getPoints().addAll(this.shapePoints);
-        boat.setFill(Color.valueOf(this.shapeColor));
-        return boat;
+        return getPolygon(this.shapePoints);
     }
 }
