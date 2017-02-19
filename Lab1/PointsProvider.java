@@ -9,33 +9,35 @@ class PointsProvider {
     final static Double windowWidth;
 
     static {
+        Double pictureWidth = 400.0;
+        Double pictureHeight = 400.0;
         windowHeight = 500.0;
         windowWidth = 500.0;
-
+        Double pictureStartX = (windowWidth - pictureWidth) / 2;
+        Double pictureStartY = 0.0;
         sailPoints = new Double[] {
-                200.0, 60.0,
-                320.0, 60.0,
-                310.0, 120.0,
-                330.0, 180.0,
-                195.0, 175.0,
-                183.0, 120.0
+                pictureStartX + 150.0, pictureStartY + 60.0,
+                pictureStartX + 270.0, pictureStartY + 60.0,
+                pictureStartX + 260.0, pictureStartY + 120.0,
+                pictureStartX + 280.0, pictureStartY + 180.0,
+                pictureStartX + 145.0, pictureStartY + 175.0,
+                pictureStartX + 127.0, pictureStartY + 120.0
         };
 
-
         boomPoints = new HashMap<>() ;
-        boomPoints.put("start_x", 255.0);
+        boomPoints.put("start_x", pictureStartX + 205.0);
         boomPoints.put("start_y", 100.0);
         boomPoints.put("height", 200.0);
         boomPoints.put("width", 10.0);
 
 
         boatPoints = new Double[] {
-                50.0, 200.0,
-                200.0, 300.0,
-                300.0, 300.0,
-                450.0, 210.0,
-                330.0, 376.0,
-                195.0, 376.0
+                pictureStartX + 0.0, 200.0,
+                pictureStartX + 160.0, 300.0,
+                pictureStartX + 290.0, 300.0,
+                pictureStartX + 400.0, 210.0,
+                pictureStartX + 300.0, 376.0,
+                pictureStartX + 145.0, 376.0
         };
     }
 }
