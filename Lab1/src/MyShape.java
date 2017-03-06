@@ -1,3 +1,5 @@
+package src;
+
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 import javafx.scene.paint.Color;

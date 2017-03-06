@@ -1,4 +1,5 @@
-import javafx.scene.paint.Color;
+package src;
+
 import javafx.scene.shape.Polygon;
 
 public class Sail extends MyShape{

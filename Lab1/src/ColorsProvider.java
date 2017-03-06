@@ -1,3 +1,5 @@
+package src;
+
 class ColorsProvider {
 
     final static String backgroundColor = "#FFFF80";
