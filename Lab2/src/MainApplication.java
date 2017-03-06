@@ -22,9 +22,9 @@ public class MainApplication {
         BaseFigure[] shipParts = {boom, sail, boat};
         Ship ship = new Ship(shipParts);
 
-        AnimatedShip animatedShip = new AnimatedShip(ship, availableSize);
+        AnimatedShip animatedShip = new AnimatedShip(ship, availableSize, ColorsProvider.BackgroundColor);
 
-        SceneBorder sceneBorder = new ShipSceneBorder(availableSize);
+        SceneBorder sceneBorder = new ShipSceneBorder(availableSize, ColorsProvider.BorderColor);
         animatedShip.setSceneBorder(sceneBorder);
 
         frame.add(animatedShip);

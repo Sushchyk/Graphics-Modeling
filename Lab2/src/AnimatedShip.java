@@ -7,11 +7,9 @@ public class AnimatedShip extends JPanel implements ActionListener {
 
     private final static int TIMER_DELAY = 20;
     private final static int INITIAL_DELAY = 500;
-
     private final static float DEFAULT_DELTA = 0.01f;
 
-    private final static Color BACKGROUND_COLOR = new Color(255, 255, 130);
-
+    private Color backgroundColor;
     private Dimension frameSize;
 
     private final Ship ship;
@@ -22,9 +20,10 @@ public class AnimatedShip extends JPanel implements ActionListener {
     private float scale = 1f;
     private float scaleDelta = -DEFAULT_DELTA;
 
-    public AnimatedShip(Ship ship, Dimension frameSize) {
+    public AnimatedShip(Ship ship, Dimension frameSize, Color backgroundColor) {
         this.ship = ship;
         this.frameSize = frameSize;
+        this.backgroundColor = backgroundColor;
         initTimer();
     }
 
@@ -39,6 +38,8 @@ public class AnimatedShip extends JPanel implements ActionListener {
         Graphics2D g2d = (Graphics2D) graphics;
 
         setBackgroundToDefault(g2d);
+
+        sceneBorder = getSceneBorder();
 
         if(sceneBorder != null) {
             sceneBorder.drawBorder(g2d);
@@ -67,7 +68,7 @@ public class AnimatedShip extends JPanel implements ActionListener {
     }
 
     private void setBackgroundToDefault(Graphics2D graphics) {
-        graphics.setBackground(BACKGROUND_COLOR);
+        graphics.setBackground(this.backgroundColor);
         graphics.clearRect(0, 0, frameSize.width, frameSize.height);
     }
 
