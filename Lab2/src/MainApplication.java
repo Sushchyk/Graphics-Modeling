@@ -17,7 +17,8 @@ public class MainApplication {
 
         BaseFigure boat = new PolygonFigure(ColorsProvider.BoatColor, PointsProvider.boatPoints);
         BaseFigure sail = new PolygonFigure(ColorsProvider.SailColor, PointsProvider.sailPoints);
-        BaseFigure boom = new RectangleFigure(ColorsProvider.BoomColor, PointsProvider.boomPoints);
+        BaseFigure boom = new RectangleFigure(ColorsProvider.BoomColor, ColorsProvider.BoomGradientColor,
+                PointsProvider.boomPoints);
 
         BaseFigure[] shipParts = {boom, sail, boat};
         Ship ship = new Ship(shipParts);

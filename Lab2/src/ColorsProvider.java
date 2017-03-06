@@ -7,6 +7,7 @@ public class ColorsProvider {
     public final static Color BoatColor;
     public final static Color SailColor;
     public final static Color BorderColor;
+    public final static Color BoomGradientColor;
 
     static {
         BackgroundColor = new Color(0xFF, 0xFF, 0x80);
@@ -14,5 +15,6 @@ public class ColorsProvider {
         BoatColor = new Color(0x80, 0x40, 0x00);
         SailColor = new Color(0xC0, 0xC0, 0xC0);
         BorderColor = Color.BLUE;
+        BoomGradientColor = Color.RED;
     }
 }
