@@ -38,7 +38,7 @@ class PointsProvider {
         boomPoints = new HashMap<>();
         boomPoints.put("start_x", pictureStartX.intValue() + 205);
         boomPoints.put("start_y", 177);
-        boomPoints.put("height", 126);
+        boomPoints.put("height", 124);
         boomPoints.put("width", 10);
 
     }
