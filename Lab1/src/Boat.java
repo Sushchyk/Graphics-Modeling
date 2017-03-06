@@ -1,5 +1,3 @@
-package src;
-
 import javafx.scene.shape.Polygon;
 
 public class Boat extends MyShape {

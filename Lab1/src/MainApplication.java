@@ -1,5 +1,3 @@
-package src;
-
 import javafx.application.Application;
 
 public class MainApplication {
