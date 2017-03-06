@@ -6,6 +6,8 @@ class PointsProvider {
     final static double[][] sailPoints;
     final static HashMap<String, Integer> boomPoints;
     final static private Double windowWidth;
+    final static int BorderThickness = 4;
+    final static int BorderMargin = 10;
 
     static {
         double pictureWidth = 400.0;

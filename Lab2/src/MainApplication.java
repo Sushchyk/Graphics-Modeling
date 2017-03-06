@@ -25,6 +25,7 @@ public class MainApplication {
         AnimatedShip animatedShip = new AnimatedShip(ship, availableSize, ColorsProvider.BackgroundColor);
 
         SceneBorder sceneBorder = new ShipSceneBorder(availableSize, ColorsProvider.BorderColor);
+        sceneBorder.setBorderSize(PointsProvider.BorderThickness, PointsProvider.BorderMargin);
         animatedShip.setSceneBorder(sceneBorder);
 
         frame.add(animatedShip);

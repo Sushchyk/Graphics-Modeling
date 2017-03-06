@@ -3,12 +3,11 @@ import java.awt.*;
 public class ShipSceneBorder implements SceneBorder {
 
     private Color borderColor;
+    private Dimension frameSize;
+
     private int borderThickness = 0;
     private int borderMargin = 0;
-    private final static int DEFAULT_BORDER_MARGIN = 10;
-    private final static int DEFAULT_BORDER_SIZE = 4;
 
-    private Dimension frameSize;
 
     public void setBorderSize(int thickness, int margin) {
         this.borderThickness = thickness;
@@ -21,7 +20,7 @@ public class ShipSceneBorder implements SceneBorder {
     }
 
     private BasicStroke getBorderStroke() {
-        return new BasicStroke(DEFAULT_BORDER_SIZE,
+        return new BasicStroke(this.borderThickness,
                 BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL);
     }
 
@@ -30,8 +29,8 @@ public class ShipSceneBorder implements SceneBorder {
         g2d.setStroke(getBorderStroke());
         g2d.setColor(this.borderColor);
 
-        g2d.drawRect(DEFAULT_BORDER_MARGIN, DEFAULT_BORDER_MARGIN,
-                frameSize.width - 2 * DEFAULT_BORDER_MARGIN,
-                frameSize.height - 2 * DEFAULT_BORDER_MARGIN);
+        g2d.drawRect(this.borderMargin, this.borderMargin,
+                frameSize.width - 2 * this.borderMargin,
+                frameSize.height - 2 * this.borderMargin);
     }
 }
